@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "projecte" }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "mrm",
+    "gcg",
+    "mrm"
+  ],
+  "key": {
+    "m": { "item": "projecte:dark_matter" },
+    "r": { "item": "minecraft:redstone" },
+    "g": { "item": "minecraft:glowstone" },
+    "c": { "item": "projecte:collector_mk1" }
+  },
+  "result": {
+    "count": 1,
+    "id": "projecte_storage_mod_emc:refined_link"
+  }
+}

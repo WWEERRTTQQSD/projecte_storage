@@ -1,0 +1,9 @@
+{
+  "block.projecte_storage_mod_emc.refined_link": "精炼EMC链接方块",
+  "msg.projecte_storage_mod_emc.placed": "已放置精炼EMC链接方块：绑定到你的转化桌账户（支持终端提取与一键合成，提取实时扣EMC，NBT过滤已启用）。",
+  "msg.projecte_storage_mod_emc.rebound": "精炼EMC链接方块已重新绑定到 %s。",
+  "msg.projecte_storage_mod_emc.status.bridge": "ProjectE桥接：EMC余额 %s，记录 %s 项，买得起 %s，虚拟槽 %s（潜行右键重新绑定）",
+  "msg.projecte_storage_mod_emc.status.ledger": "本地EMC账簿：余额 %s，记录 %s 项，可购买 %s，虚拟槽 %s（投入物品可充能）",
+  "msg.projecte_storage_mod_emc.status.owner": "绑定主人：%s",
+  "msg.projecte_storage_mod_emc.status.no_projecte": "未检测到ProjectE：使用独立EMC账簿。投入物品即可折算成EMC。"
+}

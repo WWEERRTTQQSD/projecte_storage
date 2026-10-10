@@ -1,0 +1,40 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="AutoMods"
+description='''
+Refined EMC Link: wraps ProjectE transmutation tables into dynamic virtual containers.
+Terminals (AE2 / Refined Storage / Tom's Storage) see 27 proxy slots of learned-and-affordable
+items via the standard Forge IItemHandler capability; extraction debits EMC in real time,
+with cyan/red particle & sound feedback. Standalone local EMC ledger mode when ProjectE is absent.
+Compatible with both MinecraftForge and NeoForge (net.neoforged:forge 47.1.x line) on Minecraft 1.20.1.
+'''
+# Lower bound kept at 47 (not the 47.4.0 build version on purpose):
+# NeoForge for Minecraft 1.20.1 registers itself as mod "forge" with version 47.1.x,
+# and the two loaders share the identical net.minecraftforge.* API surface for this MC version.
+# A "[47.4.0,)" range would wrongly reject NeoForge 1.20.1 even though the mod runs fine there.
+[[dependencies.${mod_id}]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.${mod_id}]]
+modId="minecraft"
+mandatory=true
+versionRange="[${minecraft_version}]"
+ordering="NONE"
+side="BOTH"
+# ProjectE (等价交换) 是硬前置：未安装时 FML 会直接弹出 Missing mandatory dependencies 并拒绝启动。
+# 版本范围保持 [0,)（ProjectE 1.20.1 的 mod 版本号形如 "PE1.0.1"，写窄范围会误判），
+# ordering="AFTER" 保证 ProjectE 的 API/注册表先就绪再加载本模组。
+[[dependencies.${mod_id}]]
+modId="projecte"
+mandatory=true
+versionRange="[0,)"
+ordering="AFTER"
+side="BOTH"

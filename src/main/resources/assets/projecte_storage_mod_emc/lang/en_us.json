@@ -1,0 +1,9 @@
+{
+  "block.projecte_storage_mod_emc.refined_link": "Refined EMC Link",
+  "msg.projecte_storage_mod_emc.placed": "Refined EMC Link placed: bound to your transmutation account (terminal extraction & one-click crafting enabled, EMC charged per extract, NBT filter on).",
+  "msg.projecte_storage_mod_emc.rebound": "Refined EMC Link rebound to %s.",
+  "msg.projecte_storage_mod_emc.status.bridge": "ProjectE bridge: EMC %s, recorded %s, affordable %s, virtual slots %s (sneak-click to rebind)",
+  "msg.projecte_storage_mod_emc.status.ledger": "Local EMC ledger: EMC %s, recorded %s, buyable %s, virtual slots %s (insert items to charge)",
+  "msg.projecte_storage_mod_emc.status.owner": "Bound owner: %s",
+  "msg.projecte_storage_mod_emc.status.no_projecte": "ProjectE not detected: using standalone EMC ledger. Insert items to convert them into EMC."
+}

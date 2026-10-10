@@ -1,0 +1,4 @@
+说明：这一支是 r8 的单类热修包（stub 重编 EmcLinkConfig 塞回 r8 jar），
+自 r11 起已被完整源码干净构建取代：
+  dist/projecte_storage_mod_emc-1.0.0-neoforge-1.21.1-r11.jar
+请勿再安装本目录产物，仅留作溯源。

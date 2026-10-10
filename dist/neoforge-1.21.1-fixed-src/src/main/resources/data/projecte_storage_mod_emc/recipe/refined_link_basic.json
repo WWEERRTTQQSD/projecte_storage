@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": { "type": "neoforge:mod_loaded", "modid": "projecte" }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "iri",
+    "gdg",
+    "iri"
+  ],
+  "key": {
+    "i": { "item": "minecraft:iron_ingot" },
+    "r": { "item": "minecraft:redstone" },
+    "g": { "item": "minecraft:glowstone" },
+    "d": { "item": "minecraft:diamond" }
+  },
+  "result": {
+    "count": 1,
+    "id": "projecte_storage_mod_emc:refined_link"
+  }
+}

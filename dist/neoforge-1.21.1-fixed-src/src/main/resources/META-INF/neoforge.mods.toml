@@ -1,0 +1,41 @@
+modLoader="javafml"
+# Lower bound 3 matches the javafml language-loader shipped with NeoForge 21.1
+# (NeoForge's own neoforge.mods.toml declares "[3,]" and loads on this line).
+loaderVersion="[3,)"
+license="MIT"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="AutoMods"
+description='''
+Refined EMC Link (NeoForge 1.21.1): wraps ProjectE transmutation tables into dynamic virtual containers.
+Terminals (AE2 / Refined Storage / Tom's Storage) see a growing grid of proxy slots of learned-and-affordable
+items via the standard NeoForge IItemHandler block capability; extraction debits EMC in real time,
+with cyan/red particle & sound feedback. Standalone local EMC ledger mode when ProjectE is absent.
+'''
+
+[[dependencies.${mod_id}]]
+modId="neoforge"
+type="required"
+versionRange="${neoforge_version_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="minecraft"
+type="required"
+versionRange="[${minecraft_version},1.22)"
+ordering="NONE"
+side="BOTH"
+
+# ProjectE (等价交换) 是硬前置：type="required" 表示未安装时 NeoForge 会在加载阶段
+# 报缺失必需依赖并拒绝启动。版本范围保持 [0,)（ProjectE 1.21.1 的 mod 版本号形如 "1.1.0"，
+# 写窄范围容易随对方版本变动而误判），ordering="AFTER" 保证 ProjectE 先加载。
+[[dependencies.${mod_id}]]
+modId="projecte"
+type="required"
+versionRange="[0,)"
+ordering="AFTER"
+side="BOTH"

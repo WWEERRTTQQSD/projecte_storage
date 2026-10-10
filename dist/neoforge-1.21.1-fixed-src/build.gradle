@@ -1,0 +1,14 @@
+plugins { id 'java'; id 'net.neoforged.moddev' version '2.0.143' }
+version = '1.0.0-neoforge-1.21.1-r14'
+group = 'cn.blockforge.generated.projectestoragemodemc'
+base { archivesName = 'projecte_storage_mod_emc' }
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+neoForge { version = '21.1.244' }
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+processResources {
+    def props = [mod_id: 'projecte_storage_mod_emc', mod_name: 'ProjectE Storage', mod_version: project.version,
+                 minecraft_version: '1.21.1', neoforge_version_range: '[21.1,)']
+    inputs.properties props
+    filteringCharset = 'UTF-8'
+    filesMatching('META-INF/neoforge.mods.toml') { expand props }
+}

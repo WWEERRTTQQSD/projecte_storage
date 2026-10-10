@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    { "type": "forge:mod_loaded", "modid": "projecte" }
+  ],
+  "pattern": [
+    "mrm",
+    "gcg",
+    "mrm"
+  ],
+  "key": {
+    "m": { "item": "projecte:dark_matter" },
+    "r": { "item": "minecraft:redstone" },
+    "g": { "item": "minecraft:glowstone" },
+    "c": { "item": "projecte:collector_mk1" }
+  },
+  "result": { "item": "projecte_storage_mod_emc:refined_link" }
+}
